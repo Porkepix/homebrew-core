@@ -34,7 +34,7 @@ class Pgroonga < Formula
     system "make"
     mkdir "stage"
     system "make", "install", "DESTDIR=#{buildpath}/stage"
-
+    
     relative_pg_opt_lib = postgresql.opt_lib.relative_path_from("/")
     relative_pg_opt_share = postgresql.opt_share.relative_path_from("/")
     relative_pg_opt_include = postgresql.opt_include.relative_path_from("/")
